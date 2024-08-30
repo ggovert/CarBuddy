@@ -138,10 +138,10 @@ export default function ContactUs() {
                   href="https://www.linkedin.com/in/giovanni-govert/"
                   sx={{
                     mt: 1,
-                    backgroundColor: Theme.palette.primary.dark,
+                    backgroundColor: Theme.palette.primary.white,
                     color: "text.light",
                     fontSize: "14px",
-                    fontFamily: "Poppins",
+                    fontFamily: "Montserrat",
                     borderRadius: "16px",
                   }}
                 >
@@ -168,10 +168,10 @@ export default function ContactUs() {
                   href="https://www.linkedin.com/in/katherine-lazo-1a8349b2/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                   sx={{
                     mt: 1,
-                    backgroundColor: Theme.palette.primary.dark,
+                    backgroundColor: Theme.palette.primary.white,
                     color: "text.light",
                     fontSize: "14px",
-                    fontFamily: "Poppins",
+                    fontFamily: "Montserrat",
                     borderRadius: "16px",
                   }}
                 >

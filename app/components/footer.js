@@ -8,8 +8,7 @@ const Footer = () => {
         sx={{
           padding: "20px 0",
           textAlign: "center",
-          background: Theme.palette.primary.main,
-          color: "text.dark",
+          color: "text.light",
           // backgroundColor: 'primary.purple',
         }}
       >

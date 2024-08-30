@@ -7,6 +7,8 @@ const Theme = createTheme({
       dark: "#4056A1",
       beige: "#DCD9D5",
       beige2: "#EFE9E6",
+      green: "#00D779",
+      black: '#000000'
     },
     text: {
       dark: "#4056A1",

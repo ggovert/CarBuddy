@@ -19,10 +19,7 @@ const Navbar = () => {
     <ThemeProvider theme={Theme}>
       <AppBar
         position="static"
-        sx={{
-          backgroundColor: Theme.palette.primary.main,
-          boxShadow: "none",
-        }}
+        sx={{ backgroundColor: 'black' }} // Corrected syntax
       >
         <Toolbar>
           <Box
@@ -59,11 +56,11 @@ const Navbar = () => {
                 Chat with AI
               </Button> */}
               <Button
-                variant="outlined"
+                variant="text"
                 sx={{
                   boxShadow: "none",
                   fontFamily: "Montserrat",
-                  color: Theme.palette.text.white,
+                  color: Theme.palette.text.green,
                   fontSize: "18px",
 
                   textDecoration: "none", // Ensure no underline by default
@@ -76,12 +73,12 @@ const Navbar = () => {
                 FAQ
               </Button>
               <Button
-                variant="outlined"
+                variant="text"
                 sx={{
                   boxShadow: "none",
                   fontFamily: "Montserrat",
                   fontSize: "18px",
-                  color: Theme.palette.text.white,
+                  color: Theme.palette.text.green,
                   textDecoration: "none", // Ensure no underline by default
                   "&:hover": {
                     textDecoration: "underline", // Add underline on hover

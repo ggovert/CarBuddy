@@ -7,6 +7,8 @@ import Hero from "./components/hero";
 import Head from "next/head";
 import Navbar from "./components/navbar";
 import Theme from "./components/theme";
+import FeaturesAI from "./features/page";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -17,14 +19,18 @@ export default function Home() {
       </Head>
       <Box
         sx={{
-          background: Theme.palette.primary.main,
+          background: `linear-gradient(to bottom, black, #005852)`,
+          minHeight: '100vh', 
+          width: '100%', 
         }}
-        width="100%"
-        height="100%"
+        
       >
         <Navbar></Navbar>
         <Hero></Hero>
+        <FeaturesAI/>
+        <Footer></Footer>
       </Box>
+      
     </ThemeProvider>
   );
 }

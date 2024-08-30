@@ -11,10 +11,11 @@ const Hero = () => {
         alignItems="center"
         justifyContent="center"
         gap={4}
-        p={3}
-        sx={{ background: Theme.palette.primary.main }}
+       
+        
       >
         <Box
+        sx={{ maxWidth: '750px', textAlign:'center' }}
           display="flex"
           flexDirection={{ xs: "column", sm: "column" }}
           alignItems="center"
@@ -41,9 +42,9 @@ const Hero = () => {
         <Box>
           <Typography
             variant="h6"
-            sx={{
-              marginTop: 2,
-              marginBottom: 2,
+            sx={{maxWidth: '750px', textAlign:'center',
+              marginTop: 0,
+              marginBottom: 5,
               fontFamily: "Montserrat",
               fontSize: "24px",
               color: Theme.palette.text.white,

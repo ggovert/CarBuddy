@@ -2,8 +2,9 @@
 // JoinWaitlistButton.js
 import React, { useState } from "react";
 import db from "@/firebase"; // Adjust the import path as necessary
-import { Button, TextField, Alert, Box, Container } from "@mui/material";
+import { Button, TextField, Alert, Box, Container,InputAdornment } from "@mui/material";
 import { collection, addDoc } from "firebase/firestore";
+import Theme from '../components/theme';
 
 const JoinWaitlist = () => {
   const [email, setEmail] = useState("");
@@ -40,7 +41,7 @@ const JoinWaitlist = () => {
   return (
     <Container maxWidth="sm">
       <Box component="form" onSubmit={handleSubmit} sx={{ mt: 4 }}>
-        <TextField
+      <TextField
           fullWidth
           type="email"
           value={email}
@@ -48,16 +49,33 @@ const JoinWaitlist = () => {
           placeholder="Enter your email"
           required
           margin="normal"
+          InputProps={{
+            sx: { borderRadius: 6, backgroundColor: '#FFFFFF' }, 
+            endAdornment: (
+              <InputAdornment position="end">
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  sx={{
+                    background: Theme.palette.primary.green,
+                    borderRadius: 6,
+                    padding: '8px 16px',
+                    color: 'black',
+                    textTransform: 'none',
+                  }}
+                >
+                  Join!
+                </Button>
+              </InputAdornment>
+            ),
+          }}
+          sx={{
+            '& .MuiInputBase-input': {
+              color: '#998080', 
+            },
+          }}
         />
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          fullWidth
-          sx={{ mt: 2 }}
-        >
-          Join Waitlist
-        </Button>
         {status.message && (
           <Alert
             severity={status.type === "error" ? "error" : "success"}
