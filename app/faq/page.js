@@ -48,7 +48,7 @@ export default function Home() {
           variant="h5"
           align="center"
           sx={{
-            fontFamily: "Paytone One",
+            fontFamily: "Anton",
             //fontSize: '80px',
             fontSize: {
               xs: "30px",
@@ -57,7 +57,7 @@ export default function Home() {
               lg: "80px",
             },
             fontStyle: "normal",
-            fontWeight: 800,
+            fontWeight: "bold",
             color: Theme.palette.text.white,
             marginTop: "80px",
           }}
@@ -71,7 +71,7 @@ export default function Home() {
           padding={0}
           align="center"
           sx={{
-            fontFamily: "Paytone One",
+            fontFamily: "Montserrat",
             //fontSize: '30px',
             fontSize: {
               xs: "15px",
@@ -112,9 +112,8 @@ export default function Home() {
           }}
         >
           Below you&apos;ll find answers to the most common questions you may
-          have on Rate My WorkPlace. Also, please feel free to check our contact
-          Us page if you still can&apos;t find the answers that you are looking
-          for.
+          have on Car Buddy. Also, please feel free to check our contact Us page
+          if you still can&apos;t find the answers that you are looking for.
         </Typography>
 
         {/* Image */}
