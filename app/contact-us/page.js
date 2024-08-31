@@ -7,6 +7,7 @@ import {
   Avatar,
   Link,
   Button,
+  CssBaseline
 } from "@mui/material";
 import Theme from "../components/theme";
 import Navbar from "../components/navbar";
@@ -17,30 +18,29 @@ export default function ContactUs() {
   //   // --------------------------------- UI ------------------------------------
   return (
     <ThemeProvider theme={Theme}>
-      <Box
-        sx={{
-          background: Theme.palette.primary.main,
-          height: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          overflow: "hidden",
-        }}
+       <CssBaseline></CssBaseline>
+       <Box
+        width="100vw"
+        minHeight="100vh"
+        sx={{background: `linear-gradient(to bottom, black, #005852)`}}
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
       >
         {/* Nav bar */}
 
         <Navbar></Navbar>
         {/* Main Content */}
         <Box
-          sx={{
-            flex: 1,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-            padding: 2,
-          }}
-        >
+        width="100vw"
+        minHeight="100vh"
+        sx={{background: `linear-gradient(to bottom, black, #005852)`}}
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+      >
           {/* content */}
           <Box
             display="flex"
@@ -53,9 +53,17 @@ export default function ContactUs() {
           >
             <Typography
               variant="h4"
+              margin={1}
+              align="center"
               sx={{
                 fontFamily: "Paytone One",
                 fontSize: "32px",
+                fontSize: {
+                  xs: "22px", 
+                  sm: "28px", 
+                  md: "40px", 
+                  lg: "50px", 
+                },
                 fontStyle: "normal",
                 fontWeight: 700,
                 color: Theme.palette.text.white,
@@ -68,7 +76,14 @@ export default function ContactUs() {
             <Typography
               variant="h6"
               fontWeight="bold"
-              sx={{ mt: 2, fontFamily: "Montserrat" }}
+              sx={{ mt: 2, fontFamily: "Montserrat",
+                color: Theme.palette.text.green, 
+                fontSize: {
+                  xs: "15px", 
+                  sm: "18px", 
+                  md: "25px", 
+                  lg: "28px", 
+                },}}
             >
               Reach out to the team on LinkedIn.
             </Typography>
@@ -87,6 +102,7 @@ export default function ContactUs() {
               justifyContent="center"
               flexWrap="wrap"
               alignItems="center"
+              margin={1}
             >
               <Box
                 display="flex"
@@ -99,7 +115,15 @@ export default function ContactUs() {
                   src="/H.JPG"
                   sx={{ width: 100, height: 100, border: "2px solid #1D1632" }}
                 />
-                <Typography mt={1} align="center">
+                <Typography mt={1} align="center"
+                sx={{
+                  color: Theme.palette.text.white, 
+                  fontSize: {
+                    xs: "15px", 
+                    sm: "18px", 
+                    md: "25px", 
+                    lg: "22px", 
+                  },}}>
                   Houlaymatou B.
                 </Typography>
                 <Button
@@ -129,7 +153,14 @@ export default function ContactUs() {
                   src="/g.png"
                   sx={{ width: 100, height: 100, border: "2px solid #1D1632" }}
                 />
-                <Typography mt={1} align="center">
+                <Typography mt={1} align="center" sx={{
+                  color: Theme.palette.text.white, 
+                  fontSize: {
+                    xs: "15px", 
+                    sm: "18px", 
+                    md: "25px", 
+                    lg: "22px", 
+                  },}}>
                   Giovanni G.
                 </Typography>
 
@@ -160,7 +191,14 @@ export default function ContactUs() {
                   src="/K.jpg"
                   sx={{ width: 100, height: 100, border: "2px solid #1D1632" }}
                 />
-                <Typography mt={1} align="center">
+                <Typography mt={1} align="center" sx={{
+                  color: Theme.palette.text.white, 
+                  fontSize: {
+                    xs: "15px", 
+                    sm: "18px", 
+                    md: "25px", 
+                    lg: "22px", 
+                  },}}>
                   Katherine
                 </Typography>
                 <Button
@@ -180,10 +218,11 @@ export default function ContactUs() {
               </Box>
             </Box>
           </Box>
+          
         </Box>
-
-        {/* Footer */}
-        <Footer />
+<Footer />
+    
+        
       </Box>
     </ThemeProvider>
   );

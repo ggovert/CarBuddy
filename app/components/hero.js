@@ -27,7 +27,7 @@ const Hero = () => {
           <Typography
             variant="h6"
             sx={{
-              marginTop: 2,
+              margin: 2,
               marginBottom: 2,
               fontFamily: "Anton",
               fontSize: {
@@ -50,7 +50,7 @@ const Hero = () => {
           <Typography
             variant="h6"
             sx={{maxWidth: '750px', textAlign:'center',
-              marginTop: 0,
+              margin: 2,
               marginBottom: 5,
               fontFamily: "Montserrat",
               fontSize: {
