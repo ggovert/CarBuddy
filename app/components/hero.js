@@ -3,7 +3,6 @@ import { Box, Typography, Button, ThemeProvider } from "@mui/material";
 import Theme from "./theme";
 import JoinWaitlist from "./waitlistButton";
 
-
 const Hero = () => {
   return (
     <ThemeProvider theme={Theme}>
@@ -13,11 +12,9 @@ const Hero = () => {
         alignItems="center"
         justifyContent="center"
         gap={4}
-       
-        
       >
         <Box
-        sx={{ maxWidth: '750px', textAlign:'center' }}
+          sx={{ maxWidth: "750px", textAlign: "center" }}
           display="flex"
           flexDirection={{ xs: "column", sm: "column" }}
           alignItems="center"
@@ -31,17 +28,17 @@ const Hero = () => {
               marginBottom: 2,
               fontFamily: "Anton",
               fontSize: {
-                xs: "36px", 
-                sm: "48px", 
-                md: "56px", 
-                lg: "68px", 
+                xs: "36px",
+                sm: "48px",
+                md: "56px",
+                lg: "68px",
               },
               fontWeight: "bold",
               color: Theme.palette.text.white,
               lineHeight: 1.3,
             }}
           >
-            Isn't It Time for a{" "}
+            Isn&apos;t It Time for a{" "}
             <span style={{ color: "#00D779" }}>Better Way</span> to{" "}
             <span style={{ color: "#00D779" }}>Care for Your Car?</span>
           </Typography>
@@ -49,15 +46,17 @@ const Hero = () => {
         <Box>
           <Typography
             variant="h6"
-            sx={{maxWidth: '750px', textAlign:'center',
+            sx={{
+              maxWidth: "750px",
+              textAlign: "center",
               margin: 2,
               marginBottom: 5,
               fontFamily: "Montserrat",
               fontSize: {
-                xs: "16px", 
-                sm: "18px", 
-                md: "20px", 
-                lg: "24px", 
+                xs: "16px",
+                sm: "18px",
+                md: "20px",
+                lg: "24px",
               },
               color: Theme.palette.text.white,
               lineHeight: 1.3,
