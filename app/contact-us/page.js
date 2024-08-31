@@ -53,7 +53,7 @@ export default function ContactUs() {
           >
             <Typography
               variant="h4"
-              margin={1}
+              margin={4}
               align="center"
               sx={{
                 fontFamily: "Paytone One",
@@ -70,7 +70,7 @@ export default function ContactUs() {
                 mt: 2,
               }}
             >
-              Have a Question about Car Buddy?
+              What would you like to see in this app to make it more accessible and helpful to you ?
             </Typography>
 
             <Typography

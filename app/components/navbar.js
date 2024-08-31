@@ -1,16 +1,29 @@
-import { AppBar, Toolbar, Button, Box, ThemeProvider,InputAdornment } from "@mui/material";
+import { AppBar, Toolbar, Button, Box, 
+  ThemeProvider,InputAdornment
+,DialogTitle, Dialog, DialogActions, DialogContent, DialogContentText, TextField } from "@mui/material";
 import Theme from "./theme";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
+import {  } from "react"; // Added import
 
 const Navbar = () => {
   const router = useRouter();
-
+  const [open, setOpen] = React.useState(false);
   const handleRedirectContactUs = () => {
     router.push("/contact-us");
   };
   const handleRedirectFaq = () => {
     router.push("/faq");
+  };
+
+  
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
 
   // _____________________________ Nav Bar UI _____________________________
@@ -111,6 +124,8 @@ const Navbar = () => {
                 Contact US
               </Button>
 
+
+              <React.Fragment>
                 <Button
                   type="submit"
                   variant="contained"
@@ -127,10 +142,69 @@ const Navbar = () => {
                     color: 'black',
                     textTransform: 'none',
                   }}
+                  onClick={handleClickOpen}
                 >
                   JOIN NOW
                 </Button>
-
+                <Dialog
+                  open={open}
+                  onClose={handleClose}
+                  PaperProps={{
+                    sx: {
+                      background: `linear-gradient(to bottom, black, #005852)`, 
+                      borderRadius: 6, // Add borderRadius
+                    },
+                    component: 'form',
+                    onSubmit: (event) => {
+                      event.preventDefault();
+                      const formData = new FormData(event.currentTarget);
+                      const formJson = Object.fromEntries(formData.entries());
+                      const email = formJson.email;
+                      console.log(email);
+                      handleClose();
+                    },
+                  }}
+                >
+                  <DialogTitle sx={{
+            color: Theme.palette.primary.green, // Change title color to green
+          }}
+                ></DialogTitle>
+                  <DialogContent sx={{
+                        color: 'white', // Change title color to green
+                      }}>
+                    <DialogContentText sx={{
+            color: Theme.palette.primary.green, // Change title color to green
+          }} >
+                      Get in!
+                    </DialogContentText >
+                    <TextField
+                      autoFocus
+                      required
+                      margin="dense"
+                      id="name"
+                      name="email"
+                      label="Email Address"
+                      type="email"
+                      fullWidth
+                      variant="standard"
+                      InputLabelProps={{
+                        sx: { color: 'white' }, // Change label color to white
+                      }}
+                      InputProps={{
+                        sx: { color: 'white' }, // Change input text color to white
+                      }}
+                      
+                      
+                    />
+                  </DialogContent>
+                  <DialogActions>
+                    <Button variant="text" onClick={handleClose} sx={{
+                    color: Theme.palette.text.green}}>Cancel</Button>
+                    <Button variant="text" type="submit" sx={{
+                    color: Theme.palette.text.green,}}>Subscribe</Button>
+                  </DialogActions>
+                </Dialog>
+              </React.Fragment>
             </Box>
           </Box>
         </Toolbar>
