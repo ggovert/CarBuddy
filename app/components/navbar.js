@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Button, Box, ThemeProvider } from "@mui/material";
+import { AppBar, Toolbar, Button, Box, ThemeProvider,InputAdornment } from "@mui/material";
 import Theme from "./theme";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
@@ -19,7 +19,7 @@ const Navbar = () => {
     <ThemeProvider theme={Theme}>
       <AppBar
         position="static"
-        sx={{ backgroundColor: 'black' }} // Corrected syntax
+        sx={{ backgroundColor: 'black' }}
       >
         <Toolbar>
           <Box
@@ -29,17 +29,18 @@ const Navbar = () => {
             width="100%"
           >
             <Box>
-              <a href="/">
+              <a href="/" >
                 <img
                   src="/logo.png"
                   href="/"
                   width={70}
                   height={31}
                   alt="logo car buddy"
+                  
                 />
               </a>
             </Box>
-            <Box>
+            <Box >
               {/* <Button
                 variant="outlined"
                 sx={{
@@ -61,11 +62,21 @@ const Navbar = () => {
                   boxShadow: "none",
                   fontFamily: "Montserrat",
                   color: Theme.palette.text.green,
-                  fontSize: "18px",
-
-                  textDecoration: "none", // Ensure no underline by default
+                  fontSize: {
+                    xs: "10px", 
+                    sm: "12px", 
+                    md: "12px", 
+                    lg: "18px", 
+                  },
+                  padding: {
+                    xs: '4px 5px 4px 20px', 
+                    sm: '4px 5px 4px 20px', 
+                    md: '4px 30px 4px 30px', 
+                    lg: '4px 30px 4px 30px', 
+                  },
+                  textDecoration: "none", 
                   "&:hover": {
-                    textDecoration: "underline", // Add underline on hover
+                    textDecoration: "underline", 
                   },
                 }}
                 onClick={handleRedirectFaq}
@@ -77,17 +88,49 @@ const Navbar = () => {
                 sx={{
                   boxShadow: "none",
                   fontFamily: "Montserrat",
-                  fontSize: "18px",
+                  fontSize: {
+                    xs: "10px", 
+                    sm: "12px", 
+                    md: "12px", 
+                    lg: "18px", 
+                  },
+                  padding: {
+                    xs: '4px 20px 4px 0px', 
+                    sm: '4px 20px, 4px 0px', 
+                    md: '8px 30px 4px 0px', 
+                    lg: '8px 30px 4px 0px', 
+                  },
                   color: Theme.palette.text.green,
-                  textDecoration: "none", // Ensure no underline by default
+                  textDecoration: "none",
                   "&:hover": {
-                    textDecoration: "underline", // Add underline on hover
+                    textDecoration: "underline", 
                   },
                 }}
                 onClick={handleRedirectContactUs}
               >
                 Contact US
               </Button>
+
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  sx={{
+                    background: Theme.palette.primary.green,
+                    borderRadius: 6,
+                    padding: {
+                      xs: '4px 20px', 
+                      sm: '4px 20px', 
+                      md: '8px 40px', 
+                      lg: '8px 40px', 
+                    },
+                    color: 'black',
+                    textTransform: 'none',
+                  }}
+                >
+                  JOIN NOW
+                </Button>
+
             </Box>
           </Box>
         </Toolbar>

@@ -2,6 +2,8 @@ import { Box, Typography, Button, ThemeProvider } from "@mui/material";
 //import StarIcon from "@mui/icons-material/Star";
 import Theme from "./theme";
 import JoinWaitlist from "./waitlistButton";
+
+
 const Hero = () => {
   return (
     <ThemeProvider theme={Theme}>
@@ -20,7 +22,7 @@ const Hero = () => {
           flexDirection={{ xs: "column", sm: "column" }}
           alignItems="center"
           gap={1}
-          mb={4}
+          //mb={4}
         >
           <Typography
             variant="h6"
@@ -28,7 +30,12 @@ const Hero = () => {
               marginTop: 2,
               marginBottom: 2,
               fontFamily: "Anton",
-              fontSize: "68px",
+              fontSize: {
+                xs: "36px", 
+                sm: "48px", 
+                md: "56px", 
+                lg: "68px", 
+              },
               fontWeight: "bold",
               color: Theme.palette.text.white,
               lineHeight: 1.3,
@@ -46,7 +53,12 @@ const Hero = () => {
               marginTop: 0,
               marginBottom: 5,
               fontFamily: "Montserrat",
-              fontSize: "24px",
+              fontSize: {
+                xs: "16px", 
+                sm: "18px", 
+                md: "20px", 
+                lg: "24px", 
+              },
               color: Theme.palette.text.white,
               lineHeight: 1.3,
             }}
