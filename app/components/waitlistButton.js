@@ -73,6 +73,12 @@ const JoinWaitlist = () => {
           sx={{
             '& .MuiInputBase-input': {
               color: '#998080', 
+              fontSize: {
+                xs: "15px", 
+                sm: "15px", 
+                md: "18px", 
+                lg: "22px", 
+              },
             },
           }}
         />
