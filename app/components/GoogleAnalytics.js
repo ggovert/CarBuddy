@@ -1,8 +1,8 @@
 "use client";
 
 import Script from "next/script";
-import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, Suspense } from "react";
 
 export const GA_TRACKING_ID = "G-WZ04JJCGSF";
 
@@ -13,15 +13,14 @@ export function pageview(url) {
   });
 }
 
-export default function GoogleAnalytics() {
+function GoogleAnalyticsScript() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (pathname) {
       pageview(pathname);
     }
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return (
     <>
@@ -44,5 +43,13 @@ export default function GoogleAnalytics() {
         }}
       />
     </>
+  );
+}
+
+export default function GoogleAnalytics() {
+  return (
+    <Suspense fallback={null}>
+      <GoogleAnalyticsScript />
+    </Suspense>
   );
 }
