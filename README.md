@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### CarBuddy
 
-## Getting Started
+### Objective
+To eliminate the confusion and anxiety many car owners feel regarding maintenance schedules and mechanical issues. The goal was to build a proactive assistant that uses AI to interpret both technical data (VIN/Mileage) and visual data (photos of car parts) to provide instant, expert-level automotive advice.
 
-First, run the development server:
+### Process
+- Market Validation: Conducted early-stage market research that resulted in nearly 100 user sign-ups within the first week, validating the demand for an AI-driven car assistant.
+- Architecture Design: Developed a scalable "Virtual Garage" system using Next.js and Firebase to manage multi-vehicle profiles and maintenance logs.
+- AI Integration: Integrated OpenAI (Vision and Text) to process natural language queries and image uploads for real-time troubleshooting.
+- Data Enrichment: Connected to a VIN Decoder REST API to automate the retrieval of vehicle specifications, ensuring high data accuracy with minimal user input.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Tools
+- Frontend: React, Next.js, Material-UI (UI/UX Design).
+- Backend & Auth: Firebase (Database), Clerk (User Authentication).
+- Intelligence: OpenAI API (LLM & Computer Vision).
+- Data: External REST APIs for VIN decoding and vehicle specs.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Value Propositions
+CarBuddy demonstrates the ability to apply Computer Vision and Generative AI to solve real-world logistical problems. By converting complex maintenance schedules into a simple, chat-based interface, the project proves my proficiency in building high-traction, user-centric applications that turn technical data into actionable consumer insights.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
